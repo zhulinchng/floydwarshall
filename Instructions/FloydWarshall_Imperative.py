@@ -16,10 +16,10 @@ def floyd(distance):
         # then the distance would be zero
         if start_node == end_node:
             distance[start_node][end_node] = 0
-        continue
-    # return all possible paths and find the minimum
-    distance[start_node][end_node] = min(distance[start_node][end_node],
-                                         distance[start_node][intermediate] + distance[intermediate][end_node])
+            continue
+        # return all possible paths and find the minimum
+        distance[start_node][end_node] = min(
+            distance[start_node][end_node], distance[start_node][intermediate] + distance[intermediate][end_node])
     # Any value that have sys.maxsize has no path
     print(distance)
 
