@@ -1,4 +1,3 @@
-from dis import dis
 import sys
 import itertools
 
@@ -8,6 +7,7 @@ graph = [[0, 7, NO_PATH, 8],
          [NO_PATH, NO_PATH, 0, 2],
          [NO_PATH, NO_PATH, NO_PATH, 0]]
 MAX_LENGTH = len(graph[0])
+
 
 def floyd(distance):
     # A simple implementation of Floyd's algorithm
