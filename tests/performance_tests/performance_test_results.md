@@ -5,12 +5,12 @@ date updated: 2022-07-05 21:18
 
 # Terminal output of tests/performance_test.py
 
-- [Timeit results](#Timeit_results)
+- [Timeit results](#timeit_results)
 - [cProfile results](#cProfile_results)
     * [fw_iterative](#fw_iterative)
     * [fw_recursive](#fw_recursive)
     * [fw_recursive_memo](#fw_recursive_memo)
-- [Glossary](#Glossary)
+- [Glossary](#glossary)
 
 ## Timeit results
 
@@ -67,7 +67,7 @@ Time taken for fw_recursive_memo is 0.011658500000002903 seconds
 | 1      | 0       | 0       | 0       | 0       | {method 'rstrip' of 'str' objects}                   |
 | 1      | 0       | 0       | 0       | 0       | {method 'disable' of '_lsprof.Profiler' objects}     |
 
-## fw_recursive
+### fw_recursive
 
 - Running cprofile for fw_recursive
 - 14439334 function calls (3611722 primitive calls) in 2.631 seconds
@@ -113,7 +113,7 @@ Time taken for fw_recursive_memo is 0.011658500000002903 seconds
 | 1            | 0       | 0       | 0       | 0       | {method 'lstrip' of 'str' objects}                   |
 | 1            | 0       | 0       | 0       | 0       | {method 'rstrip' of 'str' objects}                   |
 
-## fw_recursive_memo
+### fw_recursive_memo
 
 - Running cprofile for fw_recursive_memo
 - 13738 function calls (5323 primitive calls) in 0.004 seconds
