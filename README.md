@@ -19,6 +19,11 @@ This repository includes a rewrite of the Floyd Warshall Algorithm using recursi
 
 ## Install
 Install Floyd's Algorithm using the following command:
+**Reminder: Set project to public**
+```
+pip install git+https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm.git
+```
+
 ```
 git clone https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm.git
 ```
