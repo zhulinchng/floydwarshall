@@ -7,7 +7,7 @@ import numpy as np
 from os import listdir
 from os.path import isfile, dirname, join, abspath
 sys.path.insert(0, abspath(join(dirname(__file__), '..')))
-from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo, read_dir
+from floydwarshall import read_dir
 from visualization import make_graph
 
 destination_dir = 'visualization/files'
