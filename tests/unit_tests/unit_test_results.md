@@ -1,48 +1,8 @@
-# Unit Test Results
+# Terminal output of tests/unit_test.py
+```
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
 
-## Test cases
-
-### Case 0
-
-**Input**
-- Graph
-- Visual
-
-**Expected Output**
-- Graph
-- Visual
-
-**Results**
-- fw_iterative: Passed
-- fw_recursive: Passed
-- fw_recursive_memo: Passed
-
-### Case 1
-
-**Input**
-- Graph
-- Visual
-
-**Expected Output**
-- Graph
-- Visual
-
-**Results**
-- fw_iterative: Passed
-- fw_recursive: Passed
-- fw_recursive_memo: Passed
-
-### Case 2
-
-**Input**
-- Graph
-- Visual
-
-**Expected Output**
-- Graph
-- Visual
-
-**Results**
-- fw_iterative: Passed
-- fw_recursive: Passed
-- fw_recursive_memo: Passed
+OK
+```

@@ -36,12 +36,11 @@ def read_graph(file_name: str) -> list:
         return convert_to_2d_array(file.read())
 
 
-def unit_test_dir(functions_list: list, folder_path: str, read_graph=read_graph) -> None:
+def read_dir(folder_path: str, read_graph=read_graph) -> list:
     """
-    Runs the unit test for the floyd warshall algorithm and prints the results
-    :param functions_list: list of functions to be tested
+    Reads all the test cases from the folder directory
     :param folder_path: folder directory containing the test cases
-    :return: None
+    :return: list of test cases list[dict]
     """
     # Get all filename in the directory
     data_files = [f for f in listdir(
@@ -55,7 +54,16 @@ def unit_test_dir(functions_list: list, folder_path: str, read_graph=read_graph)
         case_dict['output'] = read_graph(
             join(folder_path, f'{case}_output.txt'))
         case_list.append(case_dict)
+    return case_list
 
+
+def unit_test_dir(functions_list: list, case_list: list) -> None:
+    """
+    Runs the unit test for the floyd warshall algorithm and prints the results
+    :param functions_list: list of functions to be tested
+    :param case_list: list of test cases list[dict]
+    :return: None
+    """
     # Run the tests for all functions
     for fn in functions_list:
         print(f'Testing function {fn.__name__}')
