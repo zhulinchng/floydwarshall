@@ -1,3 +1,5 @@
+# the floywarshall module does not require any additional packages to be installed.
+# the visualization module requires the below packages
 numpy>=1.22.3
 pyvis==0.2.1
 networkx==2.6.3
