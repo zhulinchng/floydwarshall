@@ -5,11 +5,11 @@ date updated: 2022-07-05 21:18
 
 # Terminal output of tests/performance_test.py
 
-- [Timeit results](##Timeit_results)
-- [cProfile results](##cProfile_results)
-    * [fw_iterative](###fw_iterative)
-    * [fw_recursive](###fw_recursive)
-    * [fw_recursive_memo](###fw_recursive_memo)
+- [Timeit results](#Timeit_results)
+- [cProfile results](#cProfile_results)
+    * [fw_iterative](#fw_iterative)
+    * [fw_recursive](#fw_recursive)
+    * [fw_recursive_memo](#fw_recursive_memo)
 - [Glossary](##Glossary)
 
 ## Timeit results
