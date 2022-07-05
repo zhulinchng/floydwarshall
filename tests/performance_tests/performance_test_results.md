@@ -10,7 +10,7 @@ date updated: 2022-07-05 21:18
     * [fw_iterative](#fw_iterative)
     * [fw_recursive](#fw_recursive)
     * [fw_recursive_memo](#fw_recursive_memo)
-- [Glossary](##Glossary)
+- [Glossary](#Glossary)
 
 ## Timeit results
 
