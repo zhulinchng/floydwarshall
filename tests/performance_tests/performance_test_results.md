@@ -14,6 +14,10 @@ date updated: 2022-07-05 21:18
 
 ## Timeit results
 
+> Each function was run 5 times, for 11 different test cases ranging from 0x0 to 10x10 square matrices each time.
+
+> This was repeated for another 5 times, the minimum time was then recorded for each function.
+
 ```
 Time taken for fw_iterative is 0.0042489 seconds
 Time taken for fw_recursive is 6.431353099999999 seconds
@@ -21,6 +25,10 @@ Time taken for fw_recursive_memo is 0.011658500000002903 seconds
 ```
 
 ## cProfile results
+
+> Each function was run 1 time, for 11 different test cases ranging from 0x0 to 10x10 square matrices each time.
+
+> The profile shows the total time and calls taken by each function to run the 11 different test cases.
 
 ### fw_iterative
 

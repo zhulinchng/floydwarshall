@@ -22,7 +22,7 @@ def perf_test(fn: callable) -> None:
                   'edgeprob': 0.8,
                   'minval': -2,
                   'maxval': 100,
-                  'seed': 4}
+                  'seed': 4} # this seed is specifically chosen to avoid negative cycles for these graphs
         fn(graph_generator(**kwargs))
 
 def timeit_perf_test(fn) -> None:
