@@ -57,7 +57,7 @@ def fw_iterative_mod(distance: list) -> list:
     return distance
 
 
-def neg_loop_checker(graph: list, func=fw_iterative_mod) -> list:
+def negative_loop_checker(graph: list, func=fw_iterative_mod) -> list:
     """
     Checks if the graph has negative cycles using the Floyd-Warshall algorithm.
     If the graph has negative cycles,
