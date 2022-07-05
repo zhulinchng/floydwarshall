@@ -27,7 +27,7 @@ def perf_test(fn: callable) -> None:
 
 def timeit_perf_test(fn) -> None:
     """
-    Run timeit test on the iterative Floyd-Warshall algorithm.
+    Run timeit test on the given Floyd-Warshall algorithm.
     """
     setup = """
 from __main__ import perf_test
@@ -42,7 +42,7 @@ from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo, graph_g
 
 def cprofile_perf_test(fn) -> None:
     """
-    Run cprofile test on the iterative Floyd-Warshall algorithm.
+    Run cprofile test on the given Floyd-Warshall algorithm.
     """
     setup = """
 from __main__ import perf_test
