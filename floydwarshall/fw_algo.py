@@ -86,7 +86,8 @@ def fw_recursive_memo(graph: list) -> list:
         if (source, target, depth) in memo:
             return memo[(source, target, depth)]
         memo[(source, target, depth)] = min(min_path(source, target, depth-1, memo),
-                                            min_path(source, depth, depth-1, memo)
+                                            min_path(source, depth,
+                                                     depth-1, memo)
                                             + min_path(depth, target, depth-1, memo))
         return memo[(source, target, depth)]
     # Initialize memoization table with default values
