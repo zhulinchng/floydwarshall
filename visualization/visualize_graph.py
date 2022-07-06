@@ -1,6 +1,4 @@
-"""
-Creates html file with a graph of the given graph.
-"""
+"""Creates html file with a graph of the given graph."""
 import sys
 import pickle
 import numpy as np
