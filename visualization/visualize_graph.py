@@ -4,10 +4,9 @@ Creates html file with a graph of the given graph.
 import sys
 import pickle
 import numpy as np
-from os import listdir
-from os.path import isfile, dirname, join, abspath
+from os.path import dirname, join, abspath
 sys.path.insert(0, abspath(join(dirname(__file__), '..')))
-from visualization import make_graph
+from visualize import make_graph
 from floydwarshall import read_dir
 
 # Read the directory of the graph
