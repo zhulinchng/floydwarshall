@@ -10,7 +10,7 @@ dependencies = [
 
 setup(
     name='floydwarshall',
-    version='0.0.2',
+    version='0.0.3',
     author='Zhu Lin Ch\'ng',
     author_email='z.chng@liverpool.ac.uk',
     description='Floyd-Warshall algorithm for shortest path',
