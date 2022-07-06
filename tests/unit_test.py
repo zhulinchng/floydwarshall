@@ -17,11 +17,9 @@ class TestFloydWarshall(unittest.TestCase):
         fn_list = [fw_iterative, fw_recursive, fw_recursive_memo]
         for fn in fn_list:
             for test in tests:
-                # As lists are mutable, this is to copy the input to another variable
-                input_graph = [[c for c in r] for r in test['input']]
                 with self.subTest(case=test['case'], fn=fn.__name__):
                     self.assertEqual(test['output'],
-                                     fn(input_graph),
+                                     fn(test['input']),
                                      f'Failed equality {test["case"]} with {fn.__name__}')
 
     def test_floyd_warshall_fail(self):
@@ -34,11 +32,9 @@ class TestFloydWarshall(unittest.TestCase):
         fn_list = [fw_iterative, fw_recursive, fw_recursive_memo]
         for fn in fn_list:
             for test in tests:
-                # As lists are mutable, this is to copy the input
-                input_graph = [[c for c in r] for r in test['input']]
                 with self.subTest(case=test['case'], fn=fn.__name__):
                     self.assertNotEqual(test['output'],
-                                        fn(input_graph),
+                                        fn(test['input']),
                                         f'Failed inequality test {test["case"]} with {fn.__name__}')
 
 

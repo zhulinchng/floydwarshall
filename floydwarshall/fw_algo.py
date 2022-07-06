@@ -4,7 +4,7 @@ Python implementation of the Floyd-Warshall algorithm
 import itertools
 
 
-def fw_iterative(distance: list) -> list:
+def fw_iterative(input_graph: list) -> list:
     """
     Iterate over all pairs of vertices and update the shortest path between all pairs of vertices.
     Assumes input graph with NO negative cycles.
@@ -13,6 +13,8 @@ def fw_iterative(distance: list) -> list:
     :return: shortest distance matrix (distance[i][j] = distance between vertex i and j)
     """
     # Initialize variables
+    # List of lists are mutable, this is to copy the input
+    distance = [row[:] for row in input_graph]
     size_range = range(len(distance))
     # Loop over all pairs of vertices
     for intermediate, start_node, end_node in itertools.product(size_range, size_range, size_range):
@@ -26,7 +28,7 @@ def fw_iterative(distance: list) -> list:
     return distance
 
 
-def fw_recursive(graph: list) -> list:
+def fw_recursive(input_graph: list) -> list:
     """
     Recursively update the minimum path between all pairs of vertices.
     Assumes input graph with NO negative cycles.
@@ -35,6 +37,8 @@ def fw_recursive(graph: list) -> list:
     :return: minimum distance matrix (distance[i][j] = distance between vertex i and j)
     """
     # Initialize variables
+    # List of lists are mutable, this is to copy the input
+    graph = [row[:] for row in input_graph]
     size = len(graph)
     size_range = range(size)
 
@@ -60,7 +64,7 @@ def fw_recursive(graph: list) -> list:
     return graph
 
 
-def fw_recursive_memo(graph: list) -> list:
+def fw_recursive_memo(input_graph: list) -> list:
     """
     Recursively update with memoization the minimum path between all pairs of vertices.
     Assumes input graph with NO negative cycles.
@@ -69,6 +73,8 @@ def fw_recursive_memo(graph: list) -> list:
     :return: minimum distance matrix (distance[i][j] = distance between vertex i and j)
     """
     # Initialize variables
+    # List of lists are mutable, this is to copy the input
+    graph = [row[:] for row in input_graph]
     size = len(graph)
     size_range = range(size)
     memo = {}
