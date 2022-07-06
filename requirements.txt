@@ -1,1 +1,1 @@
-# the floywarshall module does not require any additional packages to be installed.
+# the floywarshall and tests module does not require any additional packages to be installed.
