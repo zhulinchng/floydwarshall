@@ -8,7 +8,8 @@ from os.path import isfile, join
 
 def read_graph(file_name: str) -> list:
     """
-    Reads the tests cases from text files separated by newlines for rows and commas for columns.
+    Read the tests cases from text files separated by newlines for rows and commas for columns.
+    
     :param file_name: name of the file containing the graph
     :return: list of lists representing the graph
     """
@@ -38,7 +39,8 @@ def read_graph(file_name: str) -> list:
 
 def read_dir(folder_path: str, read_graph=read_graph) -> list:
     """
-    Reads all the test cases from the folder directory
+    Read all the test cases from the folder directory.
+
     :param folder_path: folder directory containing the test cases
     :return: list of test cases list[dict]
     """
@@ -59,7 +61,8 @@ def read_dir(folder_path: str, read_graph=read_graph) -> list:
 
 def unit_test_dir(functions_list: list, case_list: list) -> None:
     """
-    Runs the unit test for the floyd warshall algorithm and prints the results
+    Run the unit test for the floyd warshall algorithm and prints the results.
+
     :param functions_list: list of functions to be tested
     :param case_list: list of test cases list[dict]
     :return: None

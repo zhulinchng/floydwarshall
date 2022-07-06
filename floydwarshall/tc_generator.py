@@ -1,6 +1,4 @@
-"""
-Generates a random graph with the given size and edge probability.
-"""
+"""Generates a random graph with the given size and edge probability."""
 import random
 import math
 import itertools
@@ -12,7 +10,14 @@ def graph_generator(size: int = 5,
                     maxval: float = 100,
                     seed: float = None) -> list:
     """
-    Generates a random graph with the given size and edge probability.
+    Generate a random graph with the given size and edge probability.
+
+    :param size: number of vertices
+    :param edgeprob: probability of an edge between two vertices
+    :param minval: minimum value of the edge weight
+    :param maxval: maximum value of the edge weight
+    :param seed: seed for the random generator
+    :return: list of lists representing the distance between all pairs of vertices
     """
     # Initialize variables
     if seed is not None:
@@ -39,7 +44,7 @@ def graph_generator(size: int = 5,
     return graph
 
 
-def fw_iterative_mod(distance: list) -> list:
+def fw_iterative_mod(input_graph: list) -> list:
     """
     Iterate over all pairs of vertices and update the shortest path between all pairs of vertices.
 
@@ -47,6 +52,7 @@ def fw_iterative_mod(distance: list) -> list:
     :return: shortest distance matrix (distance[i][j] = distance between vertex i and j)
     """
     # Initialize variables
+    distance = [row[:] for row in input_graph]
     size_range = range(len(distance))
     # Loop over all pairs of vertices
     for intermediate, start_node, end_node in itertools.product(size_range, size_range, size_range):
@@ -59,15 +65,16 @@ def fw_iterative_mod(distance: list) -> list:
 
 def negative_loop_checker(graph: list, func=fw_iterative_mod) -> list:
     """
-    Checks if the graph has negative cycles using the Floyd-Warshall algorithm.
+    Check if the graph has negative cycles using the Floyd-Warshall algorithm.
+
     If the graph has negative cycles,
     the diagonal of the graph that the algorithm will be different from the input graph.
 
     :param graph: list of lists representing the distance between all pairs of vertices
-    :return: True if there is a negative cycle, False otherwise
+    :return: False if there is a negative cycle, True otherwise
     """
     # As list are mutable, we need to copy the graph
-    output_graph = func([[c for c in r] for r in graph])
+    output_graph = func(graph)
     # compare the diagonal of the output graph with the original graph
     for i, _ in enumerate(graph):
         if graph[i][i] != output_graph[i][i]:

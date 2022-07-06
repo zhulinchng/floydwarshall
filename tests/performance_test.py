@@ -1,6 +1,4 @@
-"""
-Performance test on floyd warshall algorithm
-"""
+"""Performance test on floyd warshall algorithm."""
 import timeit
 import cProfile
 import sys
@@ -11,6 +9,7 @@ from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo, graph_g
 def perf_test(fn: callable) -> None:
     """
     Run performance test on the given function.
+    
     Tested across a range of graph sizes from 0 to 10.
 
     :param fn: function to run performance test on
@@ -26,9 +25,7 @@ def perf_test(fn: callable) -> None:
         fn(graph_generator(**kwargs))
 
 def timeit_perf_test(fn) -> None:
-    """
-    Run timeit test on the given Floyd-Warshall algorithm.
-    """
+    """Run timeit test on the given Floyd-Warshall algorithm."""
     setup = """
 from __main__ import perf_test
 import sys
@@ -41,16 +38,13 @@ from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo, graph_g
     print(f'Time taken for {fn.__name__} is {min(time)} seconds')
 
 def cprofile_perf_test(fn) -> None:
-    """
-    Run cprofile test on the given Floyd-Warshall algorithm.
-    """
+    """Run cprofile test on the given Floyd-Warshall algorithm."""
     setup = """
 from __main__ import perf_test
 import sys
 from os.path import dirname, join, abspath
 sys.path.insert(0, abspath(join(dirname(__file__), '..')))
 from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo, graph_generator
-
     """
     print(f'Running cprofile for {fn.__name__}')
     cProfile.run(setup+f'\nperf_test({fn.__name__})', sort='cumtime')
