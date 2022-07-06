@@ -9,6 +9,7 @@ from floydwarshall import fw_iterative, graph_generator
 
 perf_data_dir = 'tests/performance_tests/data'
 size = 10
+tc_list = []
 for i in range(size+1):
     kwargs = {'size' : i,
               'edgeprob' : 0.8,
@@ -16,9 +17,10 @@ for i in range(size+1):
               'maxval' : 100,
               'seed' : 4}
     input_graph = graph_generator(**kwargs)
-    with open(f'{perf_data_dir}/case{i}_input.pkl', 'wb') as f:
-        pickle.dump(input_graph, f)
-    with open(f'{perf_data_dir}/case{i}_output.pkl', 'wb') as f:
-        pickle.dump(fw_iterative(input_graph), f)
+    tc_list.append({'case' : 'case_'+str(i),
+                    'input_graph' : input_graph,
+                    'output_graph' : fw_iterative(input_graph)})
     print(f'Generated test case {i}')
+with open(f'{perf_data_dir}/perf_data.pkl', 'wb') as f:
+        pickle.dump(tc_list, f)
 print('Done')
