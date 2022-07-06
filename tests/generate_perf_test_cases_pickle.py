@@ -1,6 +1,4 @@
-"""
-Generate test cases for performance testing
-"""
+"""Generate test cases for performance testing."""
 import sys
 import pickle
 from os.path import dirname, join, abspath
