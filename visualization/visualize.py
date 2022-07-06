@@ -11,7 +11,7 @@ import numpy as np
 import math
 
 
-def make_graph(case2: list,
+def make_graph(input_graph: list,
                shape: str = 'box',
                gravity: int = -2500,
                central_gravity: float = 0.5,
@@ -22,7 +22,7 @@ def make_graph(case2: list,
     """
     Generates a pyvis network graph from a list of lists representing the distance between all pairs of vertices.
 
-    :param case2: list of lists representing the distance between all pairs of vertices
+    :param input_graph: list of lists representing the distance between all pairs of vertices
     :param shape: shape of the nodes
     :param gravity: gravity of the nodes
     :param central_gravity: central gravity of the nodes
@@ -33,31 +33,31 @@ def make_graph(case2: list,
     :return: pyvis network graph
     """
 
-    def make_nxgraph(case2: list) -> nx.Graph:
+    def make_nxgraph(input_graph: list) -> nx.Graph:
         """
         Generates a networkx graph from a list of lists representing the distance between all pairs of vertices.
 
-        :param case2: list of lists representing the distance between all pairs of vertices
+        :param input_graph: list of lists representing the distance between all pairs of vertices
         :return: networkx graph
         """
         G = nx.from_numpy_matrix(
-            np.array(case2), create_using=nx.MultiDiGraph())
-        labels2 = [(i, j, case2[i][j]) for i, j in G.edges()]
+            np.array(input_graph), create_using=nx.MultiDiGraph())
+        labels2 = [(i, j, input_graph[i][j]) for i, j in G.edges()]
         G.add_weighted_edges_from(ebunch_to_add=labels2)
         return G
 
     # Validate graph to be a 2d list with np.dim
-    if np.array(case2).ndim != 2:
+    if np.array(input_graph).ndim != 2:
         raise ValueError('Graph must be a 2d list')
     # Initialize variables
     net = Network(height='100%', width='100%', directed=True)
     # Generate networkx graph
-    G = make_nxgraph(case2)
+    G = make_nxgraph(input_graph)
     # Generate pyvis network graph
     net.from_nx(G)
     # Set graph properties
     labels = [i for i in G.nodes()]
-    labels2 = {(i, j): case2[i][j] for i, j in G.edges()}
+    labels2 = {(i, j): input_graph[i][j] for i, j in G.edges()}
     for i in labels:
         net.get_node(i)['label'] = 'Node '+str(i)
         net.get_node(i)['shape'] = shape
