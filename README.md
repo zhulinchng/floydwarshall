@@ -1,6 +1,10 @@
 # Floyd Warshall Algorithm
-> As part of CSCK541 June 2022 A: Practical Assessment
-This repository includes a rewrite of the Floyd Warshall Algorithm using recursion in Python and scripts to generate graphs, and to test the algorithm.
+> This repository is created as part of the Practical Assessment for University of Liverpool's CSCK541 Software Development in Practice Module (June 2022 A) 
+
+`floydwarshall` is a Python module that implements the Floyd Warshal algorithm for computing the shortest path between all pairs of vertices in a graph.
+This includes a set of functions for the Floyd Warshall Algorithm written iteratively and recursively. 
+
+`tests` is included to test for the functions and ensure that the functions work as expected.
 
 ## Table of Contents
 * [Background](#background)
