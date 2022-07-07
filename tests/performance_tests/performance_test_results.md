@@ -194,6 +194,8 @@ The tests are run with the following configuration:
 
 ## Glossary
 
+> Python Software Foundation (2021) The Python Profilers — Python 3.10.2 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
+
 | col name                  | description                                                                                                                                  |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ncalls                    | for the number of calls.                                                                                                                     |
@@ -203,8 +205,8 @@ The tests are run with the following configuration:
 | percall                   | is the quotient of cumtime divided by primitive calls                                                                                        |
 | filename:lineno(function) | provides the respective data of each function                                                                                                |
 
-- When there are two numbers in the first column (for example `3/1`), it means that the function recursed.
-- The second value is the number of primitive calls and the former is the total number of calls.
-- Note that when the function does not recurse, these two values are the same, and only the single figure is printed.
+- When there are two numbers in the first column (for example `3/1`), it means that the function recursed.[1]
+- The second value is the number of primitive calls and the former is the total number of calls.[1]
+- Note that when the function does not recurse, these two values are the same, and only the single figure is printed.[1]
 
-[Python Documentation](https://docs.python.org/3/library/profile.html)
+[1] Python Software Foundation (2021) The Python Profilers — Python 3.10.2 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
