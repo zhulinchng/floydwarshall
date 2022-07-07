@@ -28,8 +28,6 @@ This includes a set of functions for the Floyd Warshall Algorithm written iterat
 
 ## Install
 
-> **Reminder: Set project to public**
-
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Floyd Warshall Algorithm using the following command:
 
 ```shell
