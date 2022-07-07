@@ -1,12 +1,11 @@
-"""
-Python implementation of the Floyd-Warshall algorithm
-"""
+"""Python implementation of the Floyd-Warshall algorithm."""
 import itertools
 
 
 def fw_iterative(input_graph: list) -> list:
     """
     Iterate over all pairs of vertices and update the shortest path between all pairs of vertices.
+
     Assumes input graph with NO negative cycles.
 
     :param distance: list of lists representing the distance between all pairs of vertices
@@ -31,6 +30,7 @@ def fw_iterative(input_graph: list) -> list:
 def fw_recursive(input_graph: list) -> list:
     """
     Recursively update the minimum path between all pairs of vertices.
+
     Assumes input graph with NO negative cycles.
 
     :param graph: list of lists representing the distance between all pairs of vertices
@@ -67,6 +67,7 @@ def fw_recursive(input_graph: list) -> list:
 def fw_recursive_memo(input_graph: list) -> list:
     """
     Recursively update with memoization the minimum path between all pairs of vertices.
+
     Assumes input graph with NO negative cycles.
 
     :param graph: list of lists representing the distance between all pairs of vertices
