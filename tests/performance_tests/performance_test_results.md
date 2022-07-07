@@ -194,7 +194,7 @@ The tests are run with the following configuration:
 
 ## Glossary
 
-> Python Software Foundation (2021) The Python Profilers — Python 3.10.2 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
+> Python Software Foundation (2021) The Python Profilers — Python 3.10.5 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
 
 | col name                  | description                                                                                                                                  |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -209,4 +209,4 @@ The tests are run with the following configuration:
 - The second value is the number of primitive calls and the former is the total number of calls.[1]
 - Note that when the function does not recurse, these two values are the same, and only the single figure is printed.[1]
 
-[1] Python Software Foundation (2021) The Python Profilers — Python 3.10.2 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
+[1] Python Software Foundation (2021) The Python Profilers — Python 3.10.5 documentation. Available at: https://docs.python.org/3/library/profile.html (Accessed: 7 July 2022).
