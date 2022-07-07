@@ -31,7 +31,7 @@ This includes a set of functions for the Floyd Warshall Algorithm written iterat
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Floyd Warshall Algorithm using the following command:
 
 ```shell
-pip install git+https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm.git
+pip install git+https://github.com/zhulinchng/floydwarshall.git
 ```
 
 Re-run the above command to check for and install updates.
