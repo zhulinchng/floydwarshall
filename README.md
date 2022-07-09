@@ -104,6 +104,7 @@ By default, it uses an iterative floyd warshall algorithm calculate the shortest
 If **there is a negative cycle**, the node will loop back to itself differently when compared to the input graph and the function will return **False**.
 
 ```python
+>>> from floydwarshall import negative_loop_checker
 >>> from math import inf
 >>> negative_loop_checker([[0, 7, 2], [6, 0, 3], [3, 9, 0]])
 True
