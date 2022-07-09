@@ -176,7 +176,7 @@ Time taken for fw_recursive_memo is 0.010060300002805889 seconds
 
 Performance are also measured in terms of the number of calls and time taken to execute the algorithm using `cProfile` module against the same set of [inputs](https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm/-/blob/main/tests/performance_tests/data/perf_data.pkl).
 
-To run the tests, run the following command:
+To run the tests, import the functions to test from the `floydwarshall` module, and the `cprofile_perf_test` and `perf_test` function from the `tests` module and run the `cprofile_perf_test` function with the algorithm function as an argument as follows:
 
 ```python
 >>> from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo
