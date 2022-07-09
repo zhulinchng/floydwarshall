@@ -128,7 +128,7 @@ Unit tests are performed to ensure that the algorithm is working correctly.
 
 The [same set of inputs](https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm/-/tree/main/tests/unit_tests/data) are used for the unit tests.
 
-To run the tests, run the following command:
+To run the tests, import the built-in `unittest` package and the `TestFloydWarshall` class from the `tests` module and run `unittest.main()` as follows:
 
 ```python
 >>> import unittest
@@ -156,7 +156,7 @@ Functions:
 
 Performance are measured in terms of time taken to execute the algorithm using the `timeit` module against the same set of [inputs](https://gitlab.csc.liv.ac.uk/sgzchng/floyd-warshall-algorithm/-/blob/main/tests/performance_tests/data/perf_data.pkl).
 
-To run the tests, run the following command:
+To run the tests, import the functions to test from the `floydwarshall` module, and the `timeit_perf_test` and `perf_test` function from the `tests` module and run the `timeit_perf_test` function with the algorithm function as an argument as follows:
 
 ```python
 >>> from floydwarshall import fw_iterative, fw_recursive, fw_recursive_memo
