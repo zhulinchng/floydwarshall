@@ -76,7 +76,7 @@ def negative_loop_checker(graph: list, func=fw_iterative_mod) -> list:
     # As list are mutable, we need to copy the graph
     output_graph = func(graph)
     # compare the diagonal of the output graph with the original graph
-    for i, _ in enumerate(graph):
-        if graph[i][i] != output_graph[i][i]:
+    for i, _ in enumerate(output_graph):
+        if output_graph[i][i] < 0:
             return False
     return True

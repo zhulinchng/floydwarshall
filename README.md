@@ -101,7 +101,7 @@ graph_generator(size: int = 5,          # size of square matrix to generate
 
 By default, it uses an iterative floyd warshall algorithm calculate the shortest path and check if there is a negative cycle.
 
-If **there is a negative cycle**, the node will loop back to itself differently when compared to the input graph and the function will return **False**.
+If **there is a negative cycle**, the node will loop back to itself with negative weights and the function will return **False**.
 
 ```python
 >>> from floydwarshall import negative_loop_checker
