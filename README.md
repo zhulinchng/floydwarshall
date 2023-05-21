@@ -209,11 +209,6 @@ floyd-warshall-algorithm
 │       tc_generator.py
 │       __init__.py
 │
-├───instructions
-│       FloydAlgorithm - Imperative.md
-│       FloydWarshall_Imperative.py
-│       Instructions.md
-│
 └───tests
     │   generate_perf_test_cases_pickle.py
     │   performance_test.py
